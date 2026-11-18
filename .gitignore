@@ -1,0 +1,46 @@
+
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Dataset folders
+dataset/
+datasets/
+
+# Large intermediate training files
+*.npz
+*.npy
+
+# Experimental model checkpoints
+models/*.pt
+models/*.pth
+
+# Keep only the final application classifier
+models/*
+!models/hubert_noise_augmented_classifier.joblib
+!models/hubert_noise_augmented_model_info.json
+
+# Other temporary files
+.DS_Store
+Thumbs.db
+# Root-level experimental CSV files
+/*.csv
+
+# Publish only selected source files
+/src/*
+!/src/inference.py
+!/src/train_final_emotion_classifier.py
+!/src/extract_hubert_features.py
+!/src/extract_hubert_augmented_features.py
+!/src/cross_validate_hubert_augmentation.py
+!/src/compare_hubert_augmentation_types.py
+
+# Exclude old root-level diagnostic scripts
+/check_integration.py
+/evaluate_pipeline.py
+# Evaluation reports - keep local for now
+/reports/

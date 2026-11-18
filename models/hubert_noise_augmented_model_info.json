@@ -1,0 +1,23 @@
+{
+    "model_name": "HuBERT Noise-Augmented Emotion Classifier",
+    "feature_extractor": "facebook/hubert-base-ls960",
+    "feature_dimension": 768,
+    "feature_method": "Frozen HuBERT mean pooling",
+    "classifier": "Logistic Regression",
+    "C": 0.03,
+    "training_recordings": 1800,
+    "original_recordings": 900,
+    "noise_augmented_recordings": 900,
+    "emotion_names": [
+        "angry",
+        "calm",
+        "disgust",
+        "fearful",
+        "happy",
+        "neutral",
+        "sad",
+        "surprised"
+    ],
+    "cross_validation_accuracy": 0.6944,
+    "cross_validation_macro_f1": 0.6847
+}
